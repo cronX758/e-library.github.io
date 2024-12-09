@@ -1,0 +1,51 @@
+{% extends 'student_base.html' %}
+
+{% block content %}
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="header">
+            <h2>Available Books</h2>
+        </div>
+
+        <!-- Book Cards (Shelf) -->
+        <div class="book-shelf">
+            {% for book in books %}
+            <div class="book-card">
+                {% if book.cover_image %}
+                <img src="{{ book.cover_image.url }}" alt="{{ book.title }}" style="width: 75px; height: 75px;">
+                {% else %}
+                <img src="/images/defaultbook.png" alt="No Image" style="width: 75px; height: 75px;">
+                {% endif %}
+                <h4>{{ book.title }}</h4>
+                <p>{{ book.author }}</p>
+                <a href="{% url 'borrow-book' book.id %}" class="btn-borrow">Borrow</a>
+            </div>
+            {% empty %}
+            <p>No books available.</p>
+            {% endfor %}
+        </div>
+    </div>
+
+<div class="toast-container">
+        {% for message in messages %}
+        <div class="toast align-items-center text-bg-primary border-0" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="d-flex">
+                <div class="toast-body">
+                    {{ message }}
+                </div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const toastElements = document.querySelectorAll('.toast');
+            toastElements.forEach(function (toastElement) {
+                const toast = new bootstrap.Toast(toastElement, { delay: 3000 });
+                toast.show();
+            });
+        });
+    </script>
+{% endblock %}

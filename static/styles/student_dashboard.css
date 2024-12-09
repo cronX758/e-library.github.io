@@ -1,0 +1,223 @@
+/* General Styles */
+body {
+    background-image: url('/static/images/background.jpg'); /* Replace with your background image */
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    backdrop-filter: blur(5px); /* Applies to the entire body background */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    height: 100vh;
+    width: 250px;
+    position: fixed;
+    background-color: rgba(52, 58, 64, 0.7); /* Blur effect with opacity */
+    color: white;
+    padding-top: 20px;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar h2 {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 30px;
+    padding: 15px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 10px;
+}
+
+.sidebar ul li {
+    text-align: center;
+    margin: 15px 0;
+    padding: 15px;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.sidebar ul li a:hover {
+    background-color: #495057;
+    padding: 10px;
+    display: block;
+    border-radius: 5px;
+}
+
+/* Main Content Styles */
+.main-content {
+    margin-left: 250px;
+    padding: 20px;
+    backdrop-filter: blur(10px);  /* Apply blur to main content */
+}
+
+.header h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.book-shelf {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-evenly;
+}
+
+.book-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.6);
+    width: 250px;
+    text-align: center;
+    padding: 20px;
+    backdrop-filter: blur(8px);  /* Blur effect on book cards */
+}
+
+.book-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.book-card h4 {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.book-card p {
+    font-size: 14px;
+    color: #777;
+}
+
+.book-card .btn-borrow {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+.book-card .btn-borrow:hover {
+    background-color: #0056b3;
+}
+
+/* For responsiveness */
+@media (max-width: 768px) {
+    .book-shelf {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .book-card {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+.main-container {
+background: rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            width: 100%;
+            max-width: 400px;}
+}
+
+.container {
+    margin-left: 250px; /* Offset for the sidebar */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 20px;
+    backdrop-filter: blur(5px);
+}
+
+.card {
+    max-width: 500px;
+    width: 100%;
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+.card-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.card-body {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.card .btn {
+    border-radius: 5px;
+    padding: 10px 20px;
+}
+
+.card .btn-primary {
+    background-color: #007bff;
+    border: none;
+}
+
+.card .btn-secondary {
+    background-color: #6c757d;
+    border: none;
+}
+
+.card .btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.card .btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+.toast-container {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1050;
+        }
+.toast {
+            background-color: rgba(0, 123, 255, 0.9);
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            animation: fadeInOut 3s ease forwards;
+        }
+@keyframes fadeInOut {
+            0% { opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+

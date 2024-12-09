@@ -1,0 +1,130 @@
+body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: url(../../static/images/background.jpg);
+    background-size: cover;
+        }
+
+        .login-container {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .login-container h1 {
+            font-size: 24px;
+            text-align: center;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .form-control {
+            border: none;
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 10px;
+        }
+
+        .form-control:focus {
+            box-shadow: none;
+            border: 1px solid rgba(255, 255, 255, 0.7);
+        }
+
+        .btn {
+            background-color: rgba(255, 255, 255, 0.8);
+            color: #333;
+            border: none;
+            border-radius: 10px;
+        }
+
+        .btn:hover {
+            background-color: rgba(255, 255, 255, 1);
+            color: black;
+        }
+
+        .extra-options {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .extra-options a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .extra-options a:hover {
+            text-decoration: underline;
+        }
+
+        .form-group {
+    margin-bottom: 15px;
+    text-align: left;
+            color: white;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.alert {
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.alert.success {
+    background-color: #28a745;
+    color: white;
+}
+
+.alert.error {
+    background-color: #dc3545;
+    color: white;
+}
+
+.toast-container {
+    position: fixed;
+    top: 20px; /* Adjusts the distance from the top */
+    right: 20px; /* Adjusts the distance from the right */
+    z-index: 1055; /* Ensures it appears above most other elements */
+    pointer-events: none; /* Prevents accidental interaction */
+}

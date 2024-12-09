@@ -1,0 +1,14 @@
+{% extends 'index_base.html' %}
+
+{% block content %}
+    <!-- Main content -->
+    <div class="container">
+        <h1 style="font-size: 50px; ">Welcome to the E-Library</h1>
+        <p>Your gateway to a vast collection of books and resources. Browse, borrow, and learn!</p>
+        <div>
+            <a href="{% url 'admin-login' %}" class="btn btn-lg">Admin/Staff Login</a>
+            <a href="{% url 'student-login' %}" class="btn btn-lg">Student Login</a>
+        </div>
+    </div>
+
+{% endblock %}

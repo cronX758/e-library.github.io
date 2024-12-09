@@ -1,0 +1,41 @@
+{% extends 'student_base.html' %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2>{{ student.full_name }}'s Borrowed Books</h2>
+    {% if borrowed_books %}
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Book Title</th>
+                <th>Author</th>
+                <th>Borrow Date</th>
+                <th>Return Date</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for borrow in borrowed_books %}
+            <tr>
+                <td>{{ forloop.counter }}</td>
+                <td>{{ borrow.book.title }}</td>
+                <td>{{ borrow.book.author }}</td>
+                <td>{{ borrow.start_date }}</td>
+                <td>{{ borrow.return_date }}</td>
+                <td>
+                    <form method="POST" style="display:inline;">
+                        {% csrf_token %}
+                        <input type="hidden" name="borrow_id" value="{{ borrow.id }}">
+                        <button type="submit" class="btn btn-danger btn-sm">Return</button>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+    <p>No books borrowed.</p>
+    {% endif %}
+</div>
+{% endblock %}
